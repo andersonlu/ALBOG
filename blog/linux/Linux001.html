@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>ALBOG</title>
+
+	<!-- Mobile Specific
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" type="text/css"  href="../../css/style.css">
+	
+	<!-- Web Fonts
+  ================================================== -->
+	<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>-->
+	
+	<!-- JS
+  ================================================== -->
+    <script type='text/javascript' src="../../js/jquery-1.7.2.min.js"></script>
+	<script type='text/javascript' src="../../js/twitter.js"></script>
+	<script type='text/javascript' src="../../js/custom.js"></script>
+	<script type='text/javascript' src="../../js/carousel.js"></script>
+	<script type='text/javascript' src="../../js/jquery.flexslider.js"></script>
+	<script type='text/javascript' src="../../js/shortcodes.js"></script>
+	<script type='text/javascript' src="../../js/imagebox.min.js"></script>
+	
+	<!--[if lt IE 9]>
+		<script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->	
+
+	<!--[if (gte IE 6)&(lte IE 8)]>
+	  	<script src="js/selectivizr.js"></script>
+	<![endif]-->
+	
+</head>
+<body>
+
+	<!-- Primary Page Layout
+	================================================== -->
+	
+	<!-- Header -->
+	<div id="header">
+	
+		<!-- 960 Container -->
+		<div class="container">
+		
+			<!-- Logo -->
+			<div class="four columns">
+					<div id="logo"><a href="#"><img src="../../images/logo-images/albog-logo-001.png" alt="" /></a></div>
+			</div>
+			
+			<div class="twelve columns">
+			
+				<!-- Menu -->
+				<div id="navigation">
+				  <ul>
+					<li><a id="current" href="../../index.html">主页</a></li>
+					<li><a href="#">作品</a>
+						<ul>
+                        	<li><a href="#">C#</a></li>
+                            <li><a href="#">WPF</a></li>
+							<li><a href="#">JAVA</a></li>
+						</ul>
+					</li>
+					<li><a href="blog_index.html">博客</a>
+						<ul>
+							<li><a href="#">Java</a></li>
+							<li><a href="#">SQL</a></li>
+							<li><a href="#">XML</a></li>	
+                            <li><a href="index.html">LINUX</a></li>							
+						</ul>
+					</li>
+					<li><a href="#">下载</a></li>
+					<li><a href="#">联系</a>
+                   		 <ul>
+							<li><a href="#">关于我</a></li>
+							<li><a href="#">开发日志</a></li>
+							<li><a href="#">版权声明</a></li>                           							
+						</ul>
+                     </li>
+				  </ul>
+				</div>
+			</div>
+		</div>
+	</div><!-- End Header -->	
+    
+    <!-- Page Subtitle -->
+	<div id="subtitle">
+	
+		<!-- 960 Container -->
+		<div class="container">
+			<div class="sixteen columns">
+				<h3>Linux Learning Tips</h3>
+			</div>
+		</div>
+		<!-- End 960 Container -->   
+	</div><!-- End Page Subtitle -->
+	
+<!-- 960 Container -->
+	<div class="container">
+	
+		<!-- Posts Container-->
+		<div class="eleven columns">
+			<div id="blog_post_container">
+		
+				<!-- Post-->
+				<div class="post">
+					<h2>Linux基本概念</h2>
+					<div class="post-meta"><span class="icon-calendar"></span>2015.09.27<span class="icon-author"></span>作者 <a href="#">Anderson Lu</a>  <span class="icon-comment"></span>更新 <a href="#">1 Update</a></div>
+					<div class="post-thumb"><a href="../../images/Linux/Blog_Linux_002.jpg" rel="imagebox[gallery]" title="本文介绍了Linux系统的一些基本的概念"><img src="../../images/Linux/Blog_Linux_001.jpg" alt=""/><div class="overlay zoom"></div></a></div>
+					<div class="post-content">
+						<p>(更新至2015-09-27)</p>
+                        <p>
+                        001、Linux内核（Kernel）<br/>
+        				Linux系统的核心称为内核，内核控制计算机上的所有硬件和软件，在必要的时候分配硬件，使用软件。<br/><br/>
+						002、交换空间（Swap space）<br/>
+       					Linux的内存管理需要使用硬盘空间，这个空间称为交换空间。内核不断地在交换空间和实际物理空间上交换虚拟内存位置上的内容。这样系统认为可用的内存比实际存在的多得多。<br/><br/>
+                        003、分页（Page）<br/>
+                        将内存部分分组为多个数据块，这个过程称之为分页。内核将没有访问的内存分页复制到交换空间的操作称为移出。<br/><br/>    
+                        004、初始进程（Init Process）<br/>
+                        Linux创建的第一个进程。这个初始进程可以创建其他系统进程。Linux将初始进程加载到虚拟内存中。Linux每创建一个进程就为其分配一个唯一的空间，用于储存该进程的数据和代码。<br/><br/>
+                        005、 设备文件<br/>
+                        Linux将硬件设备标识为特殊文件，称为设备文件。设备文件的分类：<br/>
+                        字符、块、网络。<br/>
+                        --字符设备用于那些一次仅处理一个字符的设备。大部分的调制解调器和终端类型都识别为字符文件。<br/>
+                        --块设备用于那些一次可处理大量数据块的设备，如设备管理器。<br/>
+                        --网络文件类型用于使用数据包发送和接收数据的设备，如网卡等。<br/><br/>
+                        006、虚拟文件系统（Virtual File System VFS）<br/>
+                        Linux 系统内核使用VFS与每个文件系统进行连接。挂载和使用每个文件系统的时候，VFS在内存中缓存相关的信息。<br/><br/>
+                        007、GNU（GNU is Not Unix）<br/>
+                        GNU组织开发了一个完整的Unix使用程序集，但是没有任何内核去运行他们，这些实用程序的开发基于集中新的开发思想，称为开源软件（OOS）。Linux和GNU的结合诞生了一个完整的功能强大的免费操作系统。<br/><br/>
+                        008、Shell（GNU/Linux Shell）<br/>
+                        Shell是一个特殊的交互式实用程序。一个Linux系统中可以有多个shell程序。比如bash shell、ash shell、korn shel、tcsh shell、zsh shell等等。<br/><br/>
+                        009、Linux桌面环境<br/>
+                        X Windows系统<br/>
+                        KDE桌面<br/>
+                        GNOME桌面<br/><br/>
+                        010、发行版<br/>
+                        完整的Linux系统包称之为发行版。<br/>
+                        Slackware      原始的Linux发行版之一，广受Linux发烧友的好评。<br/>
+                        Red Hat        商用发行版，主要用于Internet服务器。<br/>
+                        Fedora          从Red Hat分离出来的部分，针对家庭用户<br/>
+                        Ubuntu         供学校和家庭使用的免费发行版<br/><br/>                        
+                        011、挂载点（mount point）<br/>
+                        虚拟目录中用于额外分配存储设备的目录<br/>
+						</p>						
+					<br/>
+					</div>
+				</div>
+				<!-- End Post-->
+				
+			</div><!-- End Posts Container-->
+		</div>
+		
+		<!-- Widget Container-->
+		<div class="five columns">
+			<div id="blog_widget_container">
+			
+				<!-- Search -->
+				<div class="search">
+					<input type="text" onblur="if(this.value=='')this.value='输入要搜索的内容回车结束';" onfocus="if(this.value=='输入要搜索的内容回车结束')this.value='';" value="输入要搜索的内容回车结束" class="text"/>
+				</div>
+				
+				<!-- Text Widget -->
+				<div class="widget">
+					<div class="widget-title"><h3>摘要</h3></div>
+					<div class="widget-text"><p>本人学习Linux系统过程中的一些笔记，涉及一些简单的概念，希望大家喜欢。如果有什么错误的地方，欢迎大家指出。</p></div>
+				</div>
+				
+				<!-- Categories -->
+				<div class="widget">
+					<div class="widget-title"><h3>分类</h3></div>
+					<div class="widget-categories">
+						<ul>
+							<li><a href="index.html">Linux</a></li>							
+						</ul>
+					</div>
+				</div>
+				
+				<!-- Twitter Widget - Blog -->
+				<div class="widget">
+					<div class="widget-title"><h3>链接</h3></div>
+					<div class="widget-categories">
+						<ul>
+							<li><a href="http://blog.csdn.net/qq_29329775" target="_blank">CSDN - Anderson</a></li>							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Widget Container-->
+		
+	</div>
+	<!-- End 960 Container -->
+
+	<!-- Footer -->
+	<div id="footer">
+	
+		<!-- 960 Container -->
+		<div class="container">
+		
+			<!--  Text Widget - 1/4 Columns -->
+			<div class="eight columns">
+				<div id="footer-logo"><img src="../../images/logo-images/albog-logo-001.png" alt="" /></div>
+				<p>ALBOG是本人用于学习交流，分享心得的地方。请不要用于任何商业用途。</p>
+				<ul class="social">
+					<li class="facebook"><a href="#"></a></li>
+					<li class="twitter"><a href="#"></a></li>
+					<li class="vimeo"><a href="#"></a></li>
+					<li class="linked"><a href="#"></a></li>
+					<li class="flickr"><a href="#"></a></li>
+				  </ul>
+			</div>
+			
+			<!--  Contact - 1/4 Columns -->
+			<div class="seven columns">
+				<h4>联系合作</h4>
+				<div class="address"><img style="padding-top: 1px" src="../../images/address.png" alt="" /><strong>地址：</strong> 广州市 广东省 中国</div>
+				<div class="address"><img style="padding-top: 1px" src="../../images/phone.png" alt=""/><strong>扣扣：</strong> 306887931</div>
+				<div class="address"><img style="padding-top: 3px" src="../../images/mail.png" alt=""/><strong>邮箱：</strong><a href="#"> jieshiluxueyan@163.com</a></div>
+			</div>
+		</div><!-- End 960 Container -->
+	</div>
+		
+		<!-- Back To Top Button -->
+		<div id="backtotop"><a href="#tagline"></a></div>
+		
+		<!-- Imagebox Build -->
+		<script src="../../js/imagebox.build.js"></script>
+		
+
+</body>
+</html>
