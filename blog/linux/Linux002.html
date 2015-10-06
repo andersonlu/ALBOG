@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>ALBOG</title>
+
+	<!-- Mobile Specific
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" type="text/css"  href="../../css/style.css">
+	
+	<!-- Web Fonts
+  ================================================== -->
+	<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>-->
+	
+	<!-- JS
+  ================================================== -->
+    <script type='text/javascript' src="../../js/jquery-1.7.2.min.js"></script>
+	<script type='text/javascript' src="../../js/twitter.js"></script>
+	<script type='text/javascript' src="../../js/custom.js"></script>
+	<script type='text/javascript' src="../../js/carousel.js"></script>
+	<script type='text/javascript' src="../../js/jquery.flexslider.js"></script>
+	<script type='text/javascript' src="../../js/shortcodes.js"></script>
+	<script type='text/javascript' src="../../js/imagebox.min.js"></script>
+	
+	<!--[if lt IE 9]>
+		<script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->	
+
+	<!--[if (gte IE 6)&(lte IE 8)]>
+	  	<script src="js/selectivizr.js"></script>
+	<![endif]-->
+	
+</head>
+<body>
+
+	<!-- Primary Page Layout
+	================================================== -->
+	
+	<!-- Header -->
+	<div id="header">
+	
+		<!-- 960 Container -->
+		<div class="container">
+		
+			<!-- Logo -->
+			<div class="four columns">
+					<div id="logo"><a href="#"><img src="../../images/logo-images/albog-logo-001.png" alt="" /></a></div>
+			</div>
+			
+			<div class="twelve columns">
+			
+				<!-- Menu -->
+				<div id="navigation">
+				  <ul>
+					<li><a id="current" href="../../index.html">主页</a></li>
+					<li><a href="#">作品</a>
+						<ul>
+                        	<li><a href="#">C#</a></li>
+                            <li><a href="#">WPF</a></li>
+							<li><a href="#">JAVA</a></li>
+						</ul>
+					</li>
+					<li><a href="blog_index.html">博客</a>
+						<ul>
+							<li><a href="#">Java</a></li>
+							<li><a href="#">SQL</a></li>
+							<li><a href="#">XML</a></li>	
+                            <li><a href="index.html">LINUX</a></li>							
+						</ul>
+					</li>
+					<li><a href="#">下载</a></li>
+					<li><a href="#">联系</a>
+                   		 <ul>
+							<li><a href="#">关于我</a></li>
+							<li><a href="#">开发日志</a></li>
+							<li><a href="#">版权声明</a></li>                           							
+						</ul>
+                     </li>
+				  </ul>
+				</div>
+			</div>
+		</div>
+	</div><!-- End Header -->	
+    
+    <!-- Page Subtitle -->
+	<div id="subtitle">
+	
+		<!-- 960 Container -->
+		<div class="container">
+			<div class="sixteen columns">
+				<h3>Linux Learning Tips</h3>
+			</div>
+		</div>
+		<!-- End 960 Container -->   
+	</div><!-- End Page Subtitle -->
+	
+<!-- 960 Container -->
+	<div class="container">
+	
+		<!-- Posts Container-->
+		<div class="eleven columns">
+			<div id="blog_post_container">
+		
+				<!-- Post-->
+				<div class="post">
+					<h2>Linux基本指令</h2>
+					<div class="post-meta"><span class="icon-calendar"></span>2015.10.06<span class="icon-author"></span>作者 <a href="#">Anderson Lu</a>  <span class="icon-comment"></span>更新 <a href="#">1 Update</a></div>
+					<div class="post-thumb"><a href="../../images/Linux/Blog_Linux_003.jpg" rel="imagebox[gallery]" title="本文介绍了Linux系统的一些基本的命令"><img src="../../images/Linux/Blog_Linux_003.jpg" alt=""/><div class="overlay zoom"></div></a></div>
+					<div class="post-content">
+						<p>(更新至2015-10-06)</p>
+                        <p>
+                        001、更换目录(cd)<br/>
+                        <br/>
+                        1、cd destination<br/>
+                           指定目录时转换到该目录，未指定参数时则回到主目录。<br/>
+                        2、destination的表示方式<br/>
+                           绝对文件路径  /（表示系统的根目录）<br/>
+                           相对文件路径：.（表示当前目录），..（表示当前目录的父目录）<br/>
+                        <br/>
+                        002、文件和目录列表(ls)<br/>
+                        <br/>
+                        ls     #按字母顺序列出文件。<br/>
+                        ls -a  #查看包含隐藏文件在内的文件，隐藏文件以.开头<br/>
+                        ls -A  #不要列出.和..文件<br/>
+                        ls -b  #打印不可打印字符的八进制值<br/>
+                        ls -B  #不要打印带波浪线的条目（波浪线表示备份文件）<br/>
+                        ls -c  #根据修改时间排序<br/>
+                        ls -C  #按列列出条目<br/>
+                        ls -F  #区分文件和目录<br/>
+                        ls -R  #查看目录下的所有文件<br/>
+                        ls -l  #显示文件的详细信息<br/>
+                        <br/>
+                        ---------------------------------------------------------------<br/>
+                        -rw-r--r--  1 anderson anderson      311  6月 17 10:09 1-1.c<br/>
+                        <br/>
+                        文件类型：文件(-) 目录（d） 字符设备(c) 块设备(b)<br/>
+                        文件权限：<br/>
+                        指向文件的链接数量：<br/>
+                        文件所有者：<br/>
+                        文件所属的组名称：<br/>
+                        文件的字节大小：<br/>
+                        上次修改文件的时间：<br/>
+                        文件或者目录的名称<br/>
+                        ----------------------------------------------------------------<br/>
+                        ls filter    #过滤器，只把文件名或者目录名为filter的显示出来<br/>
+                        ls filter?   # (?)号表示一个字符<br/>
+                        ls filter*   # (*)号表示多个字符<br/>
+                        <br/>
+                        003、创建文件（touch）<br/>
+                        <br/>
+                        touch fileName  #创建一个空的文件,或者更新文件的修改时间<br/>
+                        touch -a        #只更改访问时间<br/>
+                        touch -m        #只更改修改时间<br/>
+                        touch -t        #修改文件修改时间为 时间戳 指定的时间<br/>
+                        ----------------------------------------------------------------<br/>
+                        anderson@anderson ~/桌面 $ touch -t 201509270000 testTouchCmd<br/>
+                        anderson@anderson ~/桌面 $ ls -lh<br/>
+                        total 82M<br/>
+                        -rw-r--r--  1 anderson anderson  311  6月 17 10:09 1-1.c<br/>
+                        drwxr-xr-x  2 anderson anderson 4.0K  6月 17 10:05 Linux <br/>
+                        drwxr-xr-x 22 anderson anderson 4.0K  9月 26 21:01 openssl-1.0.2<br/>
+                        -rwxrw-rw-  1 anderson anderson 5.1M  6月 17 10:18 openssl-1.0.2.tar.gz<br/>
+                        drwxr-xr-x  4 anderson anderson 4.0K  1月 20  2014 rjsupplicant<br/>
+                        drwxr-xr-x  5 anderson anderson 4.0K  6月 15 23:56 sogoupinyin_1.2.0.0056_amd64<br/>
+                        -rwxrw-rw-  1 anderson anderson  18M  6月 15 23:38 sogoupinyin_1.2.0.0056_amd64.deb<br/>
+                        -rw-r--r--  1 anderson anderson    0  9月 27 00:00 testTouchCmd<br/>
+                        -rw-r--r--  1 anderson anderson  59M  3月 22  2014 VMwareTools-9.6.2-1688356.tar.gz<br/>
+                        anderson@anderson ~/桌面 $ <br/>
+                        -----------------------------------------------------------------<br/>
+                        <br/>
+                        004、复制文件（cp）<br/>
+                        <br/>
+                        cp source destination  #将source文件复制到destination文件<br/>
+                        <br/>
+                        005、移动文件( mv )<br/>
+                        <br/>
+                        006、删除文件( rm)<br/>
+                        <br/>
+                        007、创建目录（mkdir）<br/>
+                        <br/>
+                        008、查看文件 （stat cat more less tail）<br/>
+                        <br/>
+                        stat    #查看文件摘要信息<br/>
+                        cat     #查看文件全文<br/>
+                        more    #查看文件全文，支持向后翻页、翻行<br/>
+                        less    #查看文件全文，支持向前向后翻页，翻行<br/>
+                        tail    #查看文件的最后一组<br/>
+                        <br/>
+                        009、进程查看 （ps）<br/>
+                        <br/>
+                        ps      #查看系统进程<br/>
+                        <br/>
+                        注意：Linux系统中使用的GNU ps命令支持3种不同的命令行参：<br/>
+                              Unix参数：以短划线为前缀(-)<br/>
+                              BSD参数 ：没有短划线<br/>
+                              GNU参数 ：以双短划线为前缀(--)<br/>
+                        <br/>
+                        Unix参数部分举例：<br/>
+                        <br/>
+                        ps -a     #显示除去会话标题和无终端进程外的所有进程<br/>
+                        ps -A     #显示所有进程<br/>
+                        ---------------------------------------------------------------<br/>
+                        PID TTY          TIME CMD<br/>
+                            1 ?        00:00:02 init<br/>
+                            2 ?        00:00:00 kthreadd<br/>
+                            3 ?        00:00:00 ksoftirqd/0<br/>
+                        <br/>
+                        其中PID是指进程ID，TTY表示运行的终端，TIME表示使用的CPU时间 <br/>
+                        <br/>
+                        ps -e     #显示所有进程<br/>
+                        ps -l     #显示长列表<br/>
+                        ps -V     #显示ps的版本<br/>
+                        ----------------------------------------------------------------<br/>
+                        anderson@anderson ~ $ ps -V<br/>
+                        procps-ng version 3.3.9<br/>
+                        <br/>
+                        010、实时监控进程 （top）<br/>
+                        <br/>
+                        top - 17:29:20 up 14 min,  2 users,  load average: 0.06, 0.15, 0.22<br/>
+                        Tasks: 257 total,   3 running, 254 sleeping,   0 stopped,   0 zombie<br/>
+                        %Cpu(s): 13.0 us,  1.7 sy,  0.0 ni, 85.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st<br/>
+                        KiB Mem:   1010440 total,   948448 used,    61992 free,    80900 buffers<br/>
+                        KiB Swap:  1046524 total,        0 used,  1046524 free.   375568 cached Mem<br/>
+                        <br/>
+                          PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND      <br/>
+                         1422 root      20   0  255648  58120  15076 R  3.0  5.8   0:09.22 Xorg         <br/>
+                         2749 anderson  20   0  628868  23444  14392 S  1.0  2.3   0:02.67 gnome-termi+ <br/>
+                         2468 anderson  20   0  237640  17756  14304 S  0.3  1.8   0:02.41 vmtoolsd     <br/>
+                            1 root      20   0   33772   3132   1496 S  0.0  0.3   0:02.48 init         <br/>
+                            2 root      20   0       0      0      0 S  0.0  0.0   0:00.01 kthreadd     <br/>
+                            3 root      20   0       0      0      0 S  0.0  0.0   0:00.33 ksoftirqd/0  <br/>
+                            4 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kworker/0:<br/>
+                        <br/>
+                        PID     #进程的ID<br/>
+                        USER    #进程拥有着所属的用户<br/>
+                        PR      #进程优先级<br/>
+                        NI      #进程的nice value<br/>
+                        VIRT    #进程所使用的虚拟内存总量<br/>
+                        RES     #进程当前正在使用的物理内存量<br/>
+                        SHR     #进程与当前进程共享的内存量<br/>
+                        S       #进程状态（D=可中断睡眠，R=运行中，S=睡眠，T=已跟踪或已停止，Z=僵死）<br/>
+                        %CPU    #进程正在使用的CPU时间份额<br/>
+                        %MEM    #进程正使用的可用物理内存份额<br/>
+                        TIME+   #进程启动后已使用的总CPU时间<br/>
+                        COMMAND #进程的命令行名称<br/>
+                        <br/>
+                        011、停止进程（kill，killall）<br/>
+                        <br/>
+                        kill 3300  #将PID为3300的进程杀死<br/>
+                        killall    #杀死所有进程<br/>
+                        <br/>
+                        012、挂载介质（mount）<br/>
+                        <br/>
+                        mount      #显示系统当前的挂载介质的设备列表<br/>
+                        mount -a   #挂载etc/fstab文件中指定的所有文件系统<br/>
+                        mount -f   #是mount命令模拟挂载某个设备，实际上不挂载<br/>
+                        mount -F   #和-a参数连用时，同时挂载所有文件系统<br/>
+                        mount -v   #详细模式<br/>
+                        mount -l   #自动为ext2、ext3或者 XFS文件系统添加文件系统标签<br/>
+                        <br/>
+                        013、移出设备（unmount）<br/>
+                        <br/>
+                        unmount [ddirectory|device] 移出指定的介质<br/>
+                        <br/>
+                        014、查看文件系统（df、du）<br/>
+                        <br/>
+                        df    #查看所有已挂载磁盘的使用情况。<br/>
+                        du    #显示特定目录的磁盘的使用情况。<br/>
+                        <br/>
+                        015、数据排序（sort）<br/>
+                        <br/>
+                        016、搜索数据（grep）<br/>
+                        <br/>
+                        017、压缩数据（bzip2）<br/>
+                        <br/>
+                        bzip2             #用于压缩文件<br/>
+                        bzcat             #用于显示已压缩的文本文件的内容<br/>
+                        bunzip2           #用于解压.bzip2文件<br/>
+                        bzip2recover      #用于尝试恢复受损的压缩文件<br/>
+                        <br/>
+                        018、压缩数据（gzip）<br/>
+                        <br/>
+                        gzip              #压缩文件<br/>
+                        gzcat             #用于显示压缩后的文本文件的内容<br/>
+                        gunzip            #用于解压文件<br/>
+                        <br/>
+                        019、压缩数据（zip）<br/>
+                        <br/>
+                        zip               #用于创建包含列出文件和目录的压缩文件<br/>
+                        zipcloak          #用于创建包含列出文件和目录的加密压缩文件<br/>
+                        zipnote           #用于提取zip文件中的注释<br/>
+                        zipsplit          #用于将zip文件分割成指定特定大小的的多个小文件<br/>
+                        unzip             #用于提取压缩zip文件中的文件和目录<br/>
+                        <br/>
+                        020、归档数据（tar）<br/>
+						</p>						
+					<br/>
+					</div>
+				</div>
+				<!-- End Post-->
+				
+			</div><!-- End Posts Container-->
+		</div>
+		
+		<!-- Widget Container-->
+		<div class="five columns">
+			<div id="blog_widget_container">
+			
+				<!-- Search -->
+				<div class="search">
+					<input type="text" onblur="if(this.value=='')this.value='输入要搜索的内容回车结束';" onfocus="if(this.value=='输入要搜索的内容回车结束')this.value='';" value="输入要搜索的内容回车结束" class="text"/>
+				</div>
+				
+				<!-- Text Widget -->
+				<div class="widget">
+					<div class="widget-title"><h3>摘要</h3></div>
+					<div class="widget-text"><p>本人学习Linux系统过程中的一些笔记，涉及一些简单的概念，希望大家喜欢。如果有什么错误的地方，欢迎大家指出。</p></div>
+				</div>
+				
+				<!-- Categories -->
+				<div class="widget">
+					<div class="widget-title"><h3>分类</h3></div>
+					<div class="widget-categories">
+						<ul>
+							<li><a href="index.html">Linux</a></li>							
+						</ul>
+					</div>
+				</div>
+				
+				<!-- Twitter Widget - Blog -->
+				<div class="widget">
+					<div class="widget-title"><h3>链接</h3></div>
+					<div class="widget-categories">
+						<ul>
+							<li><a href="http://blog.csdn.net/qq_29329775" target="_blank">CSDN - Anderson</a></li>	
+                            <li><a href="http://blog.csdn.net/qq_29329775/article/details/48933281" target="_blank">在我的CSDN博客中阅读</a></li>							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Widget Container-->
+		
+	</div>
+	<!-- End 960 Container -->
+
+	<!-- Footer -->
+	<div id="footer">
+	
+		<!-- 960 Container -->
+		<div class="container">
+		
+			<!--  Text Widget - 1/4 Columns -->
+			<div class="eight columns">
+				<div id="footer-logo"><img src="../../images/logo-images/albog-logo-001.png" alt="" /></div>
+				<p>ALBOG是本人用于学习交流，分享心得的地方。请不要用于任何商业用途。</p>
+				<ul class="social">
+					<li class="facebook"><a href="#"></a></li>
+					<li class="twitter"><a href="#"></a></li>
+					<li class="vimeo"><a href="#"></a></li>
+					<li class="linked"><a href="#"></a></li>
+					<li class="flickr"><a href="#"></a></li>
+				  </ul>
+			</div>
+			
+			<!--  Contact - 1/4 Columns -->
+			<div class="seven columns">
+				<h4>联系合作</h4>
+				<div class="address"><img style="padding-top: 1px" src="../../images/address.png" alt="" /><strong>地址：</strong> 广州市 广东省 中国</div>
+				<div class="address"><img style="padding-top: 1px" src="../../images/phone.png" alt=""/><strong>扣扣：</strong> 306887931</div>
+				<div class="address"><img style="padding-top: 3px" src="../../images/mail.png" alt=""/><strong>邮箱：</strong><a href="#"> jieshiluxueyan@163.com</a></div>
+			</div>
+		</div><!-- End 960 Container -->
+	</div>
+		
+		<!-- Back To Top Button -->
+		<div id="backtotop"><a href="#tagline"></a></div>
+		
+		<!-- Imagebox Build -->
+		<script src="../../js/imagebox.build.js"></script>
+		
+
+</body>
+</html>
